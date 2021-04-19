@@ -3,43 +3,72 @@ class Form {
   constructor() {
     this.input = createInput("Name");
     this.button = createButton('Play');
-   
-    this.title = createElement('h2');
+   // this.bg = loadImage("images/background.png")
+    this.title = createElement('h1');
     this.q1 = createInput("");
     this.q2 = createInput("");
     this.q3 = createInput("");
     this.q4 = createInput("");
     this.q5 = createInput("");
+    this.teq1 = createElement("h4");
+    this.teq2 = createElement("h4");
+    this.teq3 = createElement("h4");
+    this.teq4 = createElement("h4");
+    this.teq5 = createElement("h4");
+    this.teq6 = createElement("h4");
   }
   hide(){
-    this.button.hide();
     this.input.hide();
-    this.title.hide();
+    this.button.hide();
+    this.q1.hide();
+    this.q2.hide();
+    this.q3.hide();
+    this.q4.hide();
+    this.q5.hide();
+    this.teq1.hide();
+    this.teq2.hide();
+    this.teq3.hide();
+    this.teq4.hide();
+    this.teq5.hide();
+    this.teq6.hide();
   }
 
   display(){
+   // background(this.bg);
     this.title.html("game name");
     this.title.position(displayWidth/2 - 50, 0);
-    text ("name : = ",displayWidth/2-100,displayHeight/2 - 80);
-    this.input.position(displayWidth/2 - 40 , displayHeight/2 - 80);
-    fill ("black");
-    text ("age : = ",displayWidth/2-100,displayHeight/2 - 30);
-    this.q1.position(displayWidth/2 - 40,displayHeight/2 - 30);
-    text ("what is mental health of you : = ",displayWidth/2-100,displayHeight/2 + 20);
-    this.q2.position(displayWidth/2 - 40,displayHeight/2+ 20);
-    text ("do you face any mental health issues : = ",displayWidth/2-100,displayHeight/2 + 70);
-    this.q3.position(displayWidth/2 - 40,displayHeight/2 + 70);
-    text ("how do you describe yourself : = ",displayWidth/2-100,displayHeight/2 + 120);
-    this.q4.position(displayWidth/2 - 40,displayHeight/2 + 120);
-    text ("do you have some to talk to  : = ",displayWidth/2-100,displayHeight/2 + 170);
-    this.q5.position(displayWidth/2 - 40,displayHeight/2 + 170);
+   this.teq1.html("name");
+   this.teq1.position(displayWidth/2-40,100);
+    this.input.position(displayWidth/2 - 40 ,150);
+    this.teq2.html("age");
+    this.teq2.position(displayWidth/2-40,200);
+    this.q1.position(displayWidth/2 - 40,250);
+    this.teq3.html("name");
+    this.teq3.position(displayWidth/2-40,300);
+    this.q2.position(displayWidth/2 - 40,350);
+    this.teq4.html("name");
+    this.teq4.position(displayWidth/2-40,400);
+    this.q3.position(displayWidth/2 - 40,450);
+    this.teq5.html("name");
+    this.teq5.position(displayWidth/2-40,500);
+    this.q4.position(displayWidth/2 - 40,550);
+    this.teq6.html("name");
+   this.teq6.position(displayWidth/2-40,600);
+    this.q5.position(displayWidth/2 - 40,650);
 
 
-    this.button.position(displayWidth/2 + 30, displayHeight/2 + 220);
+    this.button.position(displayWidth/2 + 30, 710);
     
     this.button.mousePressed(()=>{
       this.input.hide();
       this.button.hide();
+      this.q1.hide();
+      this.q2.hide();
+      this.q3.hide();
+      this.q4.hide();
+      this.q5.hide();
+      game = new  Game();
+      game.getState();
       player = new Player();
       player.getCount();
       player.name = this.input.value();
@@ -53,15 +82,13 @@ class Form {
 
       player.update();
       player.updateCount(playerCount);
-      this.greeting.html("Hello " + player.name)
-      this.greeting.position(displayWidth/2 - 70, displayHeight/4);
+      
+      game.update(1);
+
     });
-    this.reset.mousePressed(()=>{
-      game.update(0);
-      player.updateCount(0);
-      Player.reset();
-      Player.updatecarsatend(0);
-    })
-    
+   
+      
+  
   }
+
 }
