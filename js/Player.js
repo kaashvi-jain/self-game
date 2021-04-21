@@ -7,6 +7,7 @@ class Player {
       this.q3 = null;
       this.q4 = null;
       this.q5 = null;
+      this.level = 0;
     }
     getCount(){
         var playerCountRef = database.ref('playerCount');
@@ -30,6 +31,7 @@ class Player {
         q3:this.q3,
         q4:this.q4,
         q5:this.q5,
+        level:this.level
       });
     }
   

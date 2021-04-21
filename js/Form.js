@@ -43,16 +43,16 @@ class Form {
     this.teq2.html("age");
     this.teq2.position(displayWidth/2-40,200);
     this.q1.position(displayWidth/2 - 40,250);
-    this.teq3.html("name");
+    this.teq3.html("do you face any mental health promblems");
     this.teq3.position(displayWidth/2-40,300);
     this.q2.position(displayWidth/2 - 40,350);
-    this.teq4.html("name");
+    this.teq4.html("how do you describe mental health");
     this.teq4.position(displayWidth/2-40,400);
     this.q3.position(displayWidth/2 - 40,450);
-    this.teq5.html("name");
+    this.teq5.html("overall how you rate your mental health");
     this.teq5.position(displayWidth/2-40,500);
     this.q4.position(displayWidth/2 - 40,550);
-    this.teq6.html("name");
+    this.teq6.html("how many times in a week do you feel low");
    this.teq6.position(displayWidth/2-40,600);
     this.q5.position(displayWidth/2 - 40,650);
 
