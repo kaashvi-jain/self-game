@@ -30,4 +30,17 @@ class Game {
       }
      
     }  
+    endgame(){
+      this.update(2);
+     player.level = 0;
+     player.score = 0;
+     player.update();
+    }
+    countinegame(){
+      player.score += 5;
+      if(player.score%500 == 0){
+        player.level += 1;
+      }
+      player.update();
+    }
 }
