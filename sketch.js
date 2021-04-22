@@ -8,6 +8,7 @@ var allPlayers;
 var basebg,playerimg;
 var seen;
 var level2,level3,level4,level5,level6,level7,level8,level9,level10;
+var bad1,bad2,bad3,bad4,good1,good2,good3;
 var obstacleGroup = [];
 var score = 0;
 
@@ -26,6 +27,14 @@ function preload(){
   level8 = loadImage("images/8.jpg");
   level9 = loadImage("images/9.jpg");
   level10 = loadImage("images/10.png");
+  bad1 = loadImage("images/bad1.jpg");
+  bad2 = loadImage("images/bad2.png");
+  bad3 = loadImage("images/bad3.png");
+  bad4 = loadImage("images/bad4.jpg");
+  good1 = loadImage("images/good1.png");
+  good2 = loadImage("images/goo2.png");
+  good3 = loadImage ("images/good3.png");
+  
 
 
 }
