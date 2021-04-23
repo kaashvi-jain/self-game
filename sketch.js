@@ -9,6 +9,7 @@ var basebg,playerimg;
 var seen;
 var level2,level3,level4,level5,level6,level7,level8,level9,level10;
 var bad1,bad2,bad3,bad4,good1,good2,good3;
+var obstacle;
 var obstacleGroup = [];
 var score = 0;
 
@@ -32,7 +33,7 @@ function preload(){
   bad3 = loadImage("images/bad3.png");
   bad4 = loadImage("images/bad4.jpg");
   good1 = loadImage("images/good1.png");
-  good2 = loadImage("images/goo2.png");
+  good2 = loadImage("images/good2.png");
   good3 = loadImage ("images/good3.png");
   
 
@@ -74,7 +75,7 @@ function draw(){
     }
     level.show();
     for(var i = obstacleGroup.length-1;i>= 0;i -- ){
-      if(obstacleGroup[i].isTouching(player)){
+      if(obstacleGroup[i].isTouching(level.runner)){
         switch(obstacleGroup[i].type){
           case 1 :
             game.endgame();

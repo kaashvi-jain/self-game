@@ -7,7 +7,7 @@ class Gamelevel{
         this.bgsprite.scale = 5;
         this.bgsprite.velocityY = 2;
         this.bgsprite.addImage(basebg);*/
-        this.runner = createSprite(100,100,displayWidth/2,displayHeight-200)
+        this.runner = createSprite(displayWidth/2,displayHeight-200,displayWidth/2,displayHeight-200)
         this.runner.addImage(playerimg);
         this.obstaclegroup = new Group ();
         this.goodgroup = new Group ();
@@ -40,7 +40,7 @@ class Gamelevel{
                 switch(rand){
                   case 1:obstacle = new Obstacle(good1,2);  
                   break;
-                  case 2 :obstacle= new Obstacle(good2,2); 
+                  case 2 :obstacle = new Obstacle(good2,2); 
                   break;
                    case 3 :obstacle = new Obstacle(good3,2); 
                   break;

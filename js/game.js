@@ -23,7 +23,7 @@ class Game {
           if(allPlayers[p].level == 1){
             welcome.hide();
             level = new Gamelevel();
-            level.show();
+            //level.show();
            
           }
         }
